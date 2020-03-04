@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+route::view('/', 'inicio')->name('inicio');
+route::view('/prueba', 'prueba')->name('prueba');
+route::view('/layout', 'layout')->name('layout');
