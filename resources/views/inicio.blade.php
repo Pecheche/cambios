@@ -29,19 +29,21 @@
 
     <header>
 
-        <div align="center" class="wrapper" style="padding-top:60px;">
+        <div align="center" style="padding-top:80px;">
 
-            <img src="/img/logo.png" alt="logo tigo"  width="18%" height="18%">
-    
-            <h4 style="color:#115992; font-weight:bold; padding-top:20px">ADMINISTRACIÓN DE CAMBIOS</h4>
-    
+             <img src="/img/logo.png" alt="logo tigo"  width="18%" height="18%">
+        
+             <h4 style="color:#115992; font-weight:bold; padding-top:20px">ADMINISTRACIÓN DE CAMBIOS</h4>
+        
         </div>
-
-        <div align="center" class="subheader">
-
+    
+         <div align="center" class="subheader">
+    
             <h5 style="font-weight:bold; color:#CE3613; padding-top:px">INICIO DE SESIÓN</h5>
-
+    
         </div>
+
+
 
     </header>
 
@@ -50,9 +52,9 @@
                     <!-- Cuerpo -->
 
 
-    <div align="center" class="container-fluid" style="padding-top:50px; ">
+    <div align="center" class="container-fluid" style="padding-top:90px; ">
 
-        <div align="right" class="col-12" style="padding-top:15px; width:360px; heigth: 36px;">
+        <div  class="col-12" style="padding-top:15px; width:360px; heigth: 36px;">
 
 
             <form align="center">
@@ -74,7 +76,7 @@
         </div>
 
 
-        <div align="right" class="col-12" style="padding-top:15px; width:360px; heigth: 36px;">
+        <div  class="col-12" style="padding-top:15px; width:360px; heigth: 36px;">
 
         
             <form align="center">
@@ -114,18 +116,24 @@
 
 
 
-    <footer>
+    <footer >
 
-        <div align="center" class="wrapper" style="padding-bottom: 70px;">
+        <div >
 
-            <p>Edatel | TigoUne - <?php echo (date("Y"));?></p>
-    
-            <p><span ><i class="fa fa-phone" aria-hidden="true"></i> Contacto de soporte técnico: </span></p>
-    
-                <a href="mailto:Fabian.Villa@tigoune.com?subject=Problemas técnicos. Plataforma gestor problemas" "email me"><i class="fa fa-envelope" aria-hidden="true"></i> David.Guerrero.P@tigo.com.co</a> - Teléfono: 515 59 66 - 305
-                436 5666
+            <div align="center" style="padding-top:100px;">
+
+                <h4>Edatel | TigoUne - <?php echo (date("Y"));?></h4>
         
-        </div> 
+                <h4><span ><i class="fa fa-phone" aria-hidden="true"></i> Contacto de soporte técnico: </span></h4>
+        
+                    <a href="mailto:Fabian.Villa@tigoune.com?subject=Problemas técnicos. Plataforma gestor problemas" "email me"><i class="fa fa-envelope" aria-hidden="true"></i> David.Guerrero.P@tigo.com.co</a> - Teléfono: 515 59 66 - 305
+                    436 5666
+            
+            </div>
+
+        </div>
+
+ 
 
 
     </footer>
