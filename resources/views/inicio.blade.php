@@ -8,7 +8,8 @@
     <!-- LINKS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+
 
 
 
@@ -19,9 +20,12 @@
    
 
     
-    <title>Document</title>
+    <title>Cambios</title>
 </head>
 <body>
+
+
+                    <!-- Encabezado -->
 
     <header>
 
@@ -42,61 +46,77 @@
     </header>
 
 
-    <div class="container wrapper" style="padding-top:50px; ">
 
-        <div class="row" style="padding-top:15px;">
+                    <!-- Cuerpo -->
 
-            
-            <div align="center">
-            
-                <h4><span><i class="fa fa-user"></i> Usuario</span></h4>
 
-            </div>
+    <div align="center" class="container-fluid" style="padding-top:50px; ">
 
-            <div align="center"> 
+        <div align="right" class="col-12" style="padding-top:15px; width:360px; heigth: 36px;">
 
-                <input type="text" class="form-control" style="width:30%" placeholder="Usuario">
-            
-            </div>
 
+            <form align="center">
+
+                <div align="center" >
+                
+                    <h4><span><i class="fa fa-user"></i> Usuario</span></h4>
+        
+                </div>
+        
+                 <div align="center"> 
+        
+                    <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario">
+                    
+                </div>
+        
+            </form>
+        
         </div>
 
 
-        <div class="row" style="padding-top:15px;">
+        <div align="right" class="col-12" style="padding-top:15px; width:360px; heigth: 36px;">
 
         
-            <div align="center">
+            <form align="center">
+
+                <div>
             
-                <h4><span><i class="fa fa-key"></i> Contraseña</span></h4>
-    
-            </div>
-    
-            <div align="center"> 
-    
-                <input type="text" class="form-control" style="width:30%;" placeholder="Contraseña">
-            
-            </div>
+                    <h4><span><i class="fa fa-key"></i> Contraseña</span></h4>
+        
+                </div>
+        
+                <div> 
+        
+                    <input type="text" id="contaseña" name="contraseña" class="form-control" placeholder="Contraseña">
+                
+                </div>
+
+            </form>
     
         </div>
-    
+        
+    </div>
 
     
         <div align="center" style="padding-top:35px;">
     
             <form method="POST " action="/prueba">
-                <button type="submit; button" style="color:white" class="btn tigo">Ingresar</button>
+                <button type="submit; button" class="btn"  style="background:#115992; color:white">Ingresar</button>
             </form>
     
         </div>
     
 
-    </div>
+
+
+
+                    <!-- Pie de página -->
 
 
 
     <footer>
 
-        <div align="center" style="padding-bottom: 70px;">
+        <div align="center" class="wrapper" style="padding-bottom: 70px;">
 
             <p>Edatel | TigoUne - <?php echo (date("Y"));?></p>
     
@@ -109,6 +129,10 @@
 
 
     </footer>
+
+
+
+
 
 </body>
 
