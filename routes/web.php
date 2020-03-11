@@ -13,5 +13,18 @@
 
 
 route::view('/', 'inicio')->name('inicio');
+
 route::view('/prueba', 'prueba')->name('prueba');
-route::view('/layout', 'layout')->name('layout');
+
+route::view('/usuarios', 'usuarios')->name('usuarios');
+
+route::view('/ventana', 'ventana')->name('ventana');
+
+route::view('/crear-ventana', 'crear-ventana')->name('crear-ventana');
+
+
+
+
+
+
+route::view('/nuevaprueba', 'nuevaprueba')->name('nuevaprueba');

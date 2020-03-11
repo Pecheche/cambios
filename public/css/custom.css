@@ -1,0 +1,53 @@
+.bsolid {
+    
+    border-style: solid;
+    color:black;
+    border-radius: 2px;
+
+}
+
+.shadow{
+
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+
+
+}
+
+.ancho{
+
+    padding: 50px;
+
+
+}
+
+.tamañoinput{
+
+    width: 30px;
+
+
+}
+
+.botonesVentana{
+
+    height: 36;
+
+
+}
+
+
+.col-6{
+
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+
+}
+
+
+
+

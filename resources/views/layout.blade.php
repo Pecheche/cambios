@@ -8,7 +8,8 @@
     <!-- LINKS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
 
 
 
@@ -26,7 +27,7 @@
 
     <title>@yield('title', 'cambios')</title>
 </head>
-<body>
+<body >
 
 
     <div>
@@ -49,11 +50,11 @@
     
                     <li class="nav-item dropdown">
 
-                        <a class="nav-link dropdown-toggle" href="#" style="top: 3px;" align="center" id="usuarios" data-toggle="dropdown">Usuarios</a>
+                        <a class="nav-link dropdown-toggle" href="#" style="top: 5px;" align="center" id="usuarios" data-toggle="dropdown">Usuarios</a>
 
                         <div class="dropdown-menu">
 
-                            <a class="dropdown-item" align="center" href="/">Lista de usuarios</a>
+                            <a class="dropdown-item" align="center" href="/usuarios">Lista de usuarios</a>
 
 
                         </div>
@@ -62,13 +63,13 @@
 
                     <li class="nav-item dropdown">
 
-                        <a class="nav-link dropdown-toggle" href="#" style="top: 3px;" align="center" id="ventana" data-toggle="dropdown">Ventana</a>
+                        <a class="nav-link dropdown-toggle" href="#" style="top: 5px;" align="center" id="ventana" data-toggle="dropdown">Ventana</a>
 
                         <div class="dropdown-menu">
                             
-                            <a class="dropdown-item" align="center" href="/prueba">Crear nueva ventana</a>
+                            <a class="dropdown-item" align="center" href="/crear-ventana">Crear nueva ventana</a>
 
-                            <a class="dropdown-item" align="center" href="/">Lista de ventanas</a>
+                            <a class="dropdown-item" align="center" href="/ventana">Lista de ventanas</a>
 
 
                         </div>

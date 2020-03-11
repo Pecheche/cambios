@@ -29,7 +29,7 @@
 
     <header>
 
-        <div align="center" style="padding-top:70px;">
+        <div align="center" style="padding-top:60px;">
 
              <img src="/img/logo.png" alt="logo tigo"  width="18%" height="18%">
         
@@ -52,7 +52,7 @@
                     <!-- Cuerpo -->
 
 
-    <div align="center" class="container-fluid" style="padding-top:60px; ">
+    <div align="center" class="container-fluid" style="padding-top:50px; ">
 
         <div  class="col-12" style="padding-top:15px; width:360px; heigth: 36px;">
 
