@@ -40,11 +40,11 @@
     
                     <li class="nav-item dropdown">
 
-                        <a class="nav-link dropdown-toggle" href="#"  align="center" id="usuarios" data-toggle="dropdown">Usuarios</a>
+                        <a class="nav-link dropdown-toggle" href="#"  align="center" id="usuarios" data-toggle="dropdown" style="font-size:1.5em">Usuarios</a>
 
                         <div class="dropdown-menu">
 
-                            <a class="dropdown-item" align="center" href="/usuarios">Lista de usuarios</a>
+                            <a class="dropdown-item" align="center" href="/usuarios" style="font-size:1.5em">Lista de usuarios</a>
 
 
                         </div>
@@ -53,13 +53,13 @@
 
                     <li class="nav-item dropdown">
 
-                        <a class="nav-link dropdown-toggle" href="#"  align="center" id="ventana" data-toggle="dropdown">Ventana</a>
+                        <a class="nav-link dropdown-toggle" href="#"  align="center" id="ventana" data-toggle="dropdown" style="font-size:1.5em">Ventana</a>
 
                         <div class="dropdown-menu">
                             
-                            <a class="dropdown-item" align="center" href="/crear-ventana">Crear nueva ventana</a>
+                            <a class="dropdown-item" align="center" href="/crear-ventana" style="font-size:1.5em">Crear nueva ventana</a>
 
-                            <a class="dropdown-item" align="center" href="/ventana">Lista de ventanas</a>
+                            <a class="dropdown-item" align="center" href="/ventana" style="font-size:1.5em">Lista de ventanas</a>
 
 
                         </div>

@@ -12,10 +12,6 @@
 
             @csrf
 
-
-
-    
-
                     <div class="row">
 
                         <div class="col-6">
@@ -24,7 +20,7 @@
 
                                 <label for="fecha presentacion">Fecha presentación</label>
                         
-                                <input type="text" class="form-control" placeholder="Fecha presentación" value="{{old('fecha presentacion')}}">
+                                <input type="text" class="form-control2" placeholder="Fecha presentación" value="{{old('fecha presentacion')}}">
                 
                             </div>
                         
@@ -32,7 +28,7 @@
                 
                                 <label for="prioridad">Prioridad</label>
                         
-                                <input class="form-control" placeholder="Prioridad" value="{{old('prioridad')}}">
+                                <input type="text" class="form-control2" placeholder="Prioridad" value="{{old('prioridad')}}">
                 
                             </div>
                         
@@ -40,7 +36,7 @@
                 
                                 <label for="afectacion de servicio">Afectación de servicio</label>
                         
-                                <input class="form-control" placeholder="Afectación de servicio" value="{{old('afectacion de servicio')}}">
+                                <input type="text" class="form-control2" placeholder="Afectación de servicio" value="{{old('afectacion de servicio')}}">
                 
                             </div>
                         
@@ -48,7 +44,7 @@
                 
                                 <label for="servicio afectado">Servico afectado</label>
                         
-                                <input class="form-control" placeholder="Servico afectado" value="{{old('servicio afectado')}}">
+                                <input type="text" class="form-control2" placeholder="Servico afectado" value="{{old('servicio afectado')}}">
                 
                             </div>
                         
@@ -56,7 +52,7 @@
                 
                                 <label for="riesgo">Riesgo</label>
                         
-                                <input class="form-control" placeholder="Riesgo" value="{{old('riesgo')}}">
+                                <input type="text" class="form-control2" placeholder="Riesgo" value="{{old('riesgo')}}">
                 
                             </div>
                         
@@ -64,7 +60,7 @@
                 
                                 <label for="estado">Estado</label>
                         
-                                <input class="form-control" placeholder="Estado" value="{{old('estado')}}">
+                                <input type="text" class="form-control2" placeholder="Estado" value="{{old('estado')}}">
                 
                             </div>
                         
@@ -72,7 +68,7 @@
                 
                                 <label for="tipo de cambio">Tipo de cambio</label>
                         
-                                <input class="form-control" placeholder="Tipo de cambio" value="{{old('tipo de cambio')}}">
+                                <input type="text" class="form-control2" placeholder="Tipo de cambio" value="{{old('tipo de cambio')}}">
                 
                             </div>
                         
@@ -80,7 +76,7 @@
                 
                                 <label for="responsable">Responsable</label>
                         
-                                <input class="form-control" placeholder="Responsable" value="{{old('responsable')}}">
+                                <input type="text" class="form-control2" placeholder="Responsable" value="{{old('responsable')}}">
                 
                             </div>
 
@@ -92,7 +88,7 @@
 
                                 <label for="fecha ejecucion">Fecha ejecución</label>
                         
-                                <input class="form-control" placeholder="Fecha ejecución" value="{{old('fecha ejecucion')}}">
+                                <input type="text" class="form-control2" placeholder="Fecha ejecución" value="{{old('fecha ejecucion')}}">
                 
                             </div>
                         
@@ -100,7 +96,7 @@
                 
                                 <label for="elemento de red">Elemento de red</label>
                         
-                                <input class="form-control" placeholder="Elemento de red" value="{{old('elemento de red')}}">
+                                <input type="text" class="form-control2" placeholder="Elemento de red" value="{{old('elemento de red')}}">
                 
                             </div>
                         
@@ -108,7 +104,7 @@
                 
                                 <label for="plan de cambio">Plan de cambio</label>
                         
-                                <input class="form-control" placeholder="Plan de cambio" value="{{old('plan de cambio')}}">
+                                <input type="text" class="form-control2" placeholder="Plan de cambio" value="{{old('plan de cambio')}}">
                 
                             </div>
                         
@@ -116,7 +112,7 @@
                 
                                 <label for="plan de retorno">Plan de retorno</label>
                         
-                                <input class="form-control" placeholder="Plan de retorno" value="{{old('plan de retorno')}}">
+                                <input type="text" class="form-control2" placeholder="Plan de retorno" value="{{old('plan de retorno')}}">
                 
                             </div>
                         
@@ -124,7 +120,7 @@
                 
                                 <label for="resultados">Resultados</label>
                         
-                                <input class="form-control" placeholder="Resultados" value="{{old('resultados')}}">
+                                <input type="text" class="form-control2" placeholder="Resultados" value="{{old('resultados')}}">
                 
                             </div>
                         
@@ -132,24 +128,24 @@
                 
                                 <label for="justificacion">Justificación</label>
                         
-                                <textarea class="form-control" placeholder="Justificación" value="{{old('justificacion')}}"> </textarea>
+                                <textarea type="text" class="form-control2" placeholder="Justificación" value="{{old('justificacion')}}"> </textarea>
                 
                             </div>
                         
-                            <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
+                            <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 3660x;">
                 
                                 <label for="usuario">Usuario</label>
                         
-                                <input class="form-control" placeholder="Usuario" value="{{old('usuario')}}">
+                                <input type="text" class="form-control2" placeholder="Usuario" value="{{old('usuario')}}">
                 
                             </div>
 
-                            <div style="padding-top:15px" align="center">
+                            <div style="padding-top:15px"  align="center">
 
-                            <a class="btn btn-danger" href="{{route('prueba')}}">Cancelar</a>
+                            <a class="btn btn-danger" style="padding-right:5px" href="{{route('prueba')}}">Cancelar</a>
 
 
-                            <a class="btn btn-success" href="{{route('ventana')}}">Guardar</a>
+                            <a class="btn btn-success" style="padding-left:5px" href="{{route('ventana')}}">Guardar</a>
 
                             </div>
                             
