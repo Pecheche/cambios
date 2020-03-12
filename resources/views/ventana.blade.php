@@ -52,7 +52,7 @@
 
 
 
-        <form style="padding:bottom" align="center" method="get" action="/prueba" >
+        <form style="padding:bottom" align="center" method="get" action="/nuevaprueba" >
             <button type="submit; button" class="btn" style="padding:10px">regresar</button>
         </form>
 

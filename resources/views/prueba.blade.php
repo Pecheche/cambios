@@ -7,12 +7,12 @@
 Esto es una prueba
 
 <form method="get" action="/">
-    <button type="submit; button"  button" class="btn">regresar</button>
+    <button type="submit; button" class="btn">regresar</button>
 </form>
 
 <br>
 
-<form method="get" action="/layout">
+<form method="get" action="/nuevaprueba">
     <button type="submit; button" class="btn">pepe</button>
 </form>
 

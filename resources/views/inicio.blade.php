@@ -31,7 +31,7 @@
 
         <div align="center" style="padding-top:60px;">
 
-             <img src="/img/logo.png" alt="logo tigo"  width="18%" height="18%">
+             <img src="/img/edatel.jpg" alt="logo tigo"  width="18%" height="18%">
         
              <h4 style="color:#115992; font-weight:bold; padding-top:20px">ADMINISTRACIÓN DE CAMBIOS</h4>
         
@@ -103,7 +103,7 @@
         <div align="center" style="padding-top:35px;">
     
             <form method="POST " action="/prueba">
-                <button type="submit; button" class="btn"  style="background:#115992; color:white; width:100px; height:35px">Ingresar</button>
+                <button type="submit; button" class="btn"" style="background:#115992; color:white; width:100px; height:35px">Ingresar</button>
             </form>
     
         </div>
@@ -122,7 +122,7 @@
 
             <div align="center" style="padding-top:120px;">
 
-                <h5>Edatel | TigoUne - <?php echo (date("Y"));?></h5>
+                <h5>Edatel | Tigo - <?php echo (date("Y"));?></h5>
         
                 <h5><span ><i class="fa fa-phone" aria-hidden="true"></i> Contacto de soporte técnico: </span></h5>
         

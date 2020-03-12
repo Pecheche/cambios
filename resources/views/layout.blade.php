@@ -32,25 +32,15 @@
 
     <div>
 
-        <nav class="navbar navbar-expand-sm">
-    
-            <div>
+        <nav class="navbar navbar-expand shadow-sm">
 
-                <a class="navbar-brand" href="{{route('prueba')}}">
-                    
-                    {{config('app.name')}}
-                
-                </a>
-
-            </div>
-    
             <div class="dropdown">
 
-                <ul class="nav nav-tabs nav-pills" style="">
+                <ul class="nav nav-pills" style="">
     
                     <li class="nav-item dropdown">
 
-                        <a class="nav-link dropdown-toggle" href="#" style="top: 5px;" align="center" id="usuarios" data-toggle="dropdown">Usuarios</a>
+                        <a class="nav-link dropdown-toggle" href="#"  align="center" id="usuarios" data-toggle="dropdown">Usuarios</a>
 
                         <div class="dropdown-menu">
 
@@ -63,7 +53,7 @@
 
                     <li class="nav-item dropdown">
 
-                        <a class="nav-link dropdown-toggle" href="#" style="top: 5px;" align="center" id="ventana" data-toggle="dropdown">Ventana</a>
+                        <a class="nav-link dropdown-toggle" href="#"  align="center" id="ventana" data-toggle="dropdown">Ventana</a>
 
                         <div class="dropdown-menu">
                             

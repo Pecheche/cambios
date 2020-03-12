@@ -4265,7 +4265,7 @@ input[type="button"].btn-block {
   list-style: none;
 }
 
-.nav-link {
+.link {
   display: block;
   padding: 0.5rem 1rem;
 }
@@ -4289,7 +4289,7 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs .nav-link {
-  border: 1px solid transparent;
+  border: 1px transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
@@ -10266,12 +10266,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
 
 
-  .ancho{
-
-    padding: 50px;
-
-
-}
+ 
 
 
 

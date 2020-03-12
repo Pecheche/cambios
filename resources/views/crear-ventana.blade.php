@@ -142,9 +142,7 @@
         
             
 
-            <form method="get" action="/prueba">
-                <button type="submit; button" class="btn">regresar</button>
-            </form>
+            <a class="btn btn-success" href="{{route('nuevaprueba')}}">Guardar</a>
 
 
 
