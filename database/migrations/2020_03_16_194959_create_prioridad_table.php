@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDependeciaTable extends Migration
+class CreatePrioridadTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateDependeciaTable extends Migration
      */
     public function up()
     {
-        Schema::create('dependecia', function (Blueprint $table) {
+        Schema::create('prioridad', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->char('Descripcion', 100);
+            $table->char('nombre_Prioridad', 25);
         });
     }
 
@@ -26,6 +26,6 @@ class CreateDependeciaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dependecia');
+        Schema::dropIfExists('prioridad');
     }
 }

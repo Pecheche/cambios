@@ -74,5 +74,18 @@
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+  }
 
-
+  .nav-pills1 .nav-link {
+    border-radius: 0.25rem;
+  }
+  
+  .nav-pills1 .nav-link.active,
+  .nav-pills1 .show > .nav-link {
+    color: #fff;
+    background-color: #fff;
+  }

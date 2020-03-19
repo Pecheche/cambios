@@ -16,33 +16,59 @@
 
     <h1 align="center">Usuarios</h1>
 
-    <div class="table-responsive">
+    <div class="card">
 
-        <table border="1" align="center" class="table table-responsive-sm">
+        <div class="card-body">
 
-            <thead> 
-    
-                <td align="center">id</td>
-    
-                <td align="center">Documento</td>
-    
-                <td align="center">Nombres</td>
-    
-                <td align="center">Apellidos</td>
-    
-                <td align="center">Correo</td>
-            
-                <td align="center">Rol</td>
-    
-                <td align="center">Usuario</td>
-    
-                <td align="center">Contraseña</td>
+            <table class="table-responsive table-bordered table-hover" id=listaVentana>
 
-                <td align="center">Estadio</td>
-    
-            </thead>
-    
-        </table>
+                <thead class="thead">
+
+                    <tr>
+
+                        <th>Número Usuario</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Documento</th>
+                        <th>Correo</th>
+                        <th>Telefono</th>
+                        <th>Rol</th>
+                        <th>Usuario</th>
+                        <th>Estado</th>
+
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    
+                    
+                    @foreach ($usuario as $usuarioItem)
+
+                    <tr>
+
+                        <td align="center">{{ $usuarioItem->id}}</td>
+                        <td align="center">{{ $usuarioItem->nombres_Usuario }}</td>
+                        <td align="center">{{ $usuarioItem->apellidos_Usuario_Usuario}}</td>
+                        <td align="center">{{ $usuarioItem->documento_Usuario }}</td>
+                        <td align="center">{{ $usuarioItem->correo_Usuario }}</td>
+                        <td align="center">{{ $usuarioItem->telefono_Usuario }}</td>
+                        <td align="center">{{ $usuarioItem->nombre_Rol }}</td>
+                        <td align="center">{{ $usuarioItem->usuario_Usuario }}</td>
+                        <td align="center">{{ $usuarioItem->estado }}</td>
+
+                    </tr>
+
+                    @endforeach
+
+
+
+                </tbody>
+
+            </table>
+
+        </div>
 
     </div>
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTipoCambioTable extends Migration
+class CreateModificatopologiaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateTipoCambioTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_cambio', function (Blueprint $table) {
+        Schema::create('modificatopologia', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->char('Descripcion', 20);
+            $table->char('nombre_Modifica_Topologia', 10);
         });
     }
 
@@ -26,6 +26,6 @@ class CreateTipoCambioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_cambio');
+        Schema::dropIfExists('modificatopologia');
     }
 }

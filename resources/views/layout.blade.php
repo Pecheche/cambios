@@ -27,20 +27,20 @@
 
     <title>@yield('title', 'cambios')</title>
 </head>
-<body >
+<body style="background:#E5F5FE">
 
 
     <div>
 
-        <nav class="navbar navbar-expand shadow-sm">
+        <nav class="navbar navbar-expand shadow-sm" style="background:#D7E2E9; color:white">
 
             <div class="dropdown">
 
-                <ul class="nav nav-pills" style="">
+                <ul class="nav nav-pills1">
     
                     <li class="nav-item dropdown">
 
-                        <a class="nav-link dropdown-toggle" href="#"  align="center" id="usuarios" data-toggle="dropdown" style="font-size:1.5em">Usuarios</a>
+                        <a class="nav-link dropdown-toggle" href="#"  align="center" id="usuarios" data-toggle="dropdown" style="font-size:1.5em; color:#000000">Usuarios</a>
 
                         <div class="dropdown-menu">
 
@@ -53,13 +53,13 @@
 
                     <li class="nav-item dropdown">
 
-                        <a class="nav-link dropdown-toggle" href="#"  align="center" id="ventana" data-toggle="dropdown" style="font-size:1.5em">Ventana</a>
+                        <a class="nav-link dropdown-toggle" href="#"  align="center" id="ventana" data-toggle="dropdown" style="font-size:1.5em; color:#000000">Ventana</a>
 
                         <div class="dropdown-menu">
                             
                             <a class="dropdown-item" align="center" href="/crear-ventana" style="font-size:1.5em">Crear nueva ventana</a>
 
-                            <a class="dropdown-item" align="center" href="/ventana" style="font-size:1.5em">Lista de ventanas</a>
+                            <a class="dropdown-item" align="center" href="/verventana" style="font-size:1.5em">Lista de ventanas</a>
 
 
                         </div>

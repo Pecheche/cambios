@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateElementosRedTable extends Migration
+class CreateAfectainventarioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateElementosRedTable extends Migration
      */
     public function up()
     {
-        Schema::create('elementos_red', function (Blueprint $table) {
+        Schema::create('afectainventario', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->char('NombreElemento', 40);
-            $table->char('Decripcion', 100);
+            $table->char('nombre_Afecta_Inventario', 10);
         });
     }
 
@@ -27,6 +26,6 @@ class CreateElementosRedTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('elementos_red');
+        Schema::dropIfExists('afectainventario');
     }
 }

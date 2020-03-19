@@ -15,9 +15,9 @@ class CreateResponsableTable extends Migration
     {
         Schema::create('responsable', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->char('Nombre', 40);
-            $table->char('Correo', 40);
-            $table->char('Telefono', 40);
+            $table->char('nombre_Responsable', 40);
+            $table->char('correo_Responsable', 40);
+            $table->char('telefono_Responsable', 40);
         });
     }
 

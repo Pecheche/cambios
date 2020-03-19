@@ -16,12 +16,13 @@ route::view('/', 'inicio')->name('inicio');
 
 route::view('/prueba', 'prueba')->name('prueba');
 
-route::view('/usuarios', 'usuarios')->name('usuarios');
+//route::view('/usuarios', 'usuarios')->name('usuarios');
+route::get('/usuarios', 'UsuariosController@index')->name('usuarios');
 
-route::view('/ventana', 'ventana')->name('ventana');
+route::get('/verventana', 'Ventanacontroller@index')->name('verventana');
 
 route::view('/crear-ventana', 'crear-ventana')->name('crear-ventana');
-
+route::post('/crear-ventana', 'MessagesController@store')->name('crear-ventana'); 
 
 
 

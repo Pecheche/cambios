@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateResultadosTable extends Migration
+class CreateAfectaservicioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateResultadosTable extends Migration
      */
     public function up()
     {
-        Schema::create('resultados', function (Blueprint $table) {
+        Schema::create('afectaservicio', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->char('Aplicaciom', 3);
-            $table->char('Observacion', 250);
-            $table->char('AnexosArchivos', 40);
+            $table->char('nombre_Afecta_Servicio', 10);
         });
     }
 
@@ -28,6 +26,6 @@ class CreateResultadosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('resultados');
+        Schema::dropIfExists('afectaservicio');
     }
 }
