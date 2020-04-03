@@ -8,9 +8,10 @@
 
         <h1 style="text-align:center; padding:10px">Nueva ventana</h1>
 
-        <form class="shadow py-3 " style="background:#D7E2E9;"  method="POST">
+        <form class="shadow py-3 " style="background:#D7E2E9;"  method="POST" action="{{ route('verventana.store') }}">
 
             @csrf
+
 
                     <div class="row">
 
@@ -26,15 +27,26 @@
 
                                 <label for="estado">Estado</label>
                         
-                                <input name="estado" type="text" class="form-control2" placeholder="Estado" value="{{old('estado')}}">
-                
+                                <select name="estado" id="estado" class="form-control2">
+
+                                    @foreach ($estado as $estados)
+
+                                        <option value="{{$estados->id}}"
+                                            {{ (old('estado.id') == $estados->id) ? 'selected':''}}>
+                                            {{ $estados->nombre_Estado }}
+                                        </option>
+                                        
+                                    @endforeach
+
+                                </select>
+                 
                             </div>
                         
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                 
-                                <label for="fecha de presentacion">Fecha de presentación</label>
+                                <label for="fecha_De_Presentacion">Fecha de presentación</label>
                         
-                                <input name="fecha de presentacion" type="date" class="form-control2" placeholder="Fecha de presentacion" value="{{old('fecha de presentacion')}}">
+                                <input type="text" name="fecha_De_Presentacion" class="form-control2" placeholder="Fecha de presentación" value="{{old('fecha_De_Presentacion')}}" id="fecha_De_Presentacion">
                 
                             </div>
                         
@@ -42,15 +54,37 @@
                 
                                 <label for="tipo de cambio">Tipo de cambio</label>
                         
-                                <input name="tipo de cambio" type="text" class="form-control2" placeholder="Tipo de cambio" value="{{old('tipo de cambio')}}">
+                                <select name="tipo de cambio" id="tipo de cambio" class="form-control2">
+                                    
+                                    @foreach ($tipocambio as $tipocambios)
+
+                                        <option value="{{$tipocambios->id}}"
+                                            {{ (old('tipocambio.id') == $tipocambios->id) ? 'selected':'' }}>
+                                            {{ $tipocambios->nombre_Tipo_De_Cambio }}
+                                        </option>
+                                        
+                                    @endforeach
+
+                                </select>
                 
                             </div>
                         
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                 
-                                <label for="responsable">Responsable</label>
+                                <label for="responsables">Responsable</label>
                         
-                                <input name="responsable" type="text" class="form-control2" placeholder="Responsable" value="{{old('responsable')}}">
+                                <select name="responsables" id="responsables" class="form-control2">
+                                    
+                                    @foreach ($responsable as $responsables)
+
+                                        <option value="{{$responsables->id}}"
+                                            {{ (old('responsable.id') == $responsables->id) ? 'selected':'' }}>
+                                            {{ $responsables->nombre_Responsable }}
+                                        </option>
+                                        
+                                    @endforeach
+
+                                </select>
                 
                             </div>
 
@@ -62,41 +96,41 @@
                         
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                 
-                                <label for="fecha inicio">Fecha inicio</label>
+                                <label for="fecha_Inicio_Ejecucion">Fecha inicio</label>
                         
-                                <input name="fecha inicio" type="date" class="form-control2" placeholder="Fecha inicio" value="{{old('fecha inicio')}}">
+                                <input type="text" name="fecha_Inicio_Ejecucion" class="form-control2" placeholder="Fecha inicio" value="{{old('fecha_Inicio_Ejecucion')}}" id="fecha_Inicio_Ejecucion">
                 
                             </div>
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                 
-                                <label for="hora inicio">Hora inicio</label>
+                                <label for="hora_Inicio_Ejecucion">Hora inicio</label>
                         
-                                <input name="hora inicio" type="time" class="form-control2" placeholder="Hora inicio" value="{{old('hora inicio')}}">
+                                <input name="hora_Inicio_Ejecucion" type="text" class="form-control2" placeholder="Hora inicio" value="{{old('hora_Inicio_Ejecucion')}}" id="hora_Inicio_Ejecucion">
                 
                             </div>
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                 
-                                <label for="hora fin">Hora fin</label>
+                                <label for="hora_Fin_Ejecucion">Hora fin</label>
                         
-                                <input name="hora fin" type="time" class="form-control2" placeholder="Hora fin" value="{{old('hora fin')}}">
+                                <input name="hora_Fin_Ejecucion" type="text" class="form-control2" placeholder="Hora fin" value="{{old('hora_Fin_Ejecucion')}}" id="hora_Fin_Ejecucion">
                 
                             </div>
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                 
-                                <label for="duración">Duración</label>
+                                <label for="duracion_Ejecucion">Duración</label>
                         
-                                <input name="duración" type="time" class="form-control2" placeholder="Duración" value="{{old('duración')}}">
+                                <input name="duracion_Ejecucion" type="text" class="form-control2" placeholder="Duración" value="{{old('duracion_Ejecucion')}}" id="duracion_Ejecucion">
                 
                             </div>
                         
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                 
-                                <label for="estado">Descripción</label>
+                                <label for="descripcion_Ejecución">Descripción</label>
                         
-                                <textarea name="estado" type="text" class="form-control2" placeholder="Descripción" value="{{old('estado')}}"></textarea>
+                                <textarea name="descripcion_Ejecución" type="text" class="form-control2" placeholder="Descripción" value="{{old('descripcion_Ejecución')}}" id="descripcion_Ejecución"></textarea>
                 
                             </div>
 
@@ -111,47 +145,93 @@
                     
                                 <label for="justificacion">Justificación</label>
                             
-                                <input name="justificacion" type="text" class="form-control2" placeholder="Justificación" value="{{old('justificacion')}}">
+                                <input name="justificacion" type="text" class="form-control2" placeholder="Justificación" value="{{old('justificacion')}}" id="justificacion">
                     
                             </div>
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                     
-                                <label for="prioridad">Prioridad</label>
+                                <label for="prioridades">Prioridad</label>
                             
-                                <input name="prioridad" type="text" class="form-control2" placeholder="Prioridad" value="{{old('prioridad')}}">
+                                <select name="prioridades" id="prioridades" class="form-control2">
+
+                                    @foreach ($prioridad as $prioridades)
+
+                                        <option value="{{$prioridades->id}}"
+                                            {{(old('prioridad.id') == $prioridades->id) ? 'selected':'' }}>
+                                            {{ $prioridades->nombre_Prioridad }}
+                                        </option>
+                                        
+                                    @endforeach
+
+
+                                </select>
                     
                             </div>
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                     
-                                <label for="afecta servicios">Afecta servicios</label>
+                                <label for="afectaServicios">Afecta servicios</label>
                             
-                                <input name="afecta servicios" type="text" class="form-control2" placeholder="Afecta servicios" value="{{old('afecta servicios')}}">
+                                <select name="afectaServicios" id=afectaServicios" class="form-control2">
+                                    
+                                    @foreach ($afectaservicio as $afectaservicios)
+
+                                    <option value="{{$afectaservicios->id}}"
+                                        {{(old('afectaservicio.id') == $afectaservicios->id) ? 'selected':'' }}>
+                                        {{ $afectaservicios->nombre_Afecta_Servicio }}
+                                    </option>
+                                        
+                                    @endforeach
+
+
+                                </select>
                     
                             </div>
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                     
-                                <label for="servicios afectados">Servicios afectados</label>
+                                <label for="servicios_Afectados">Servicios afectados</label>
                             
-                                <input name="servicios afectados" type="text" class="form-control2" placeholder="Servicios afectados" value="{{old('servicios afectados')}}">
+                                <input name="servicios_Afectados" type="text" class="form-control2" placeholder="Servicios afectados" value="{{old('servicios_Afectados')}}" id="servicios_Afectados">
                     
                             </div>
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                     
-                                <label for="afecta inventario">Afecta inventario</label>
+                                <label for="afecta_Inventario">Afecta inventario</label>
                             
-                                <input name="afecta inventario" type="text" class="form-control2" placeholder="Afecta inventario" value="{{old('afecta inventario')}}">
+                                <select name="afecta_Inventario" id="afecta_Inventario" class="form-control2">
+
+                                    @foreach ($afectainventario as $afectainventarios)
+
+                                    <option value="{{$afectainventarios->id}}"
+                                        {{(old('afectainventario.id') == $afectainventarios->id) ? 'selected':'' }}>
+                                        {{ $afectainventarios->nombre_Afecta_Inventario }}
+                                    </option>
+                                        
+                                    @endforeach
+
+                                </select>
                     
                             </div>
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                     
-                                <label for="modifica topologiá de red">Modifica topologiá de red</label>
+                                <label for="modifica_Topologia_De_Red">Modifica topología de red</label>
                             
-                                <input name="modifica topologiá de red" type="text" class="form-control2" placeholder="Modifica topologiá de red" value="{{old('modifica topologiá de red')}}">
+                                <select name="modifica_Topologia_De_Red" id="modifica_Topologia_De_Red" class="form-control2">
+                                    
+                                    @foreach ($modificatopologia as $modificatopologias)
+
+                                    <option value="{{$modificatopologias->id}}"
+                                        {{(old('modificatopologia.id') == $modificatopologias->id) ? 'selected':'' }}>
+                                        {{ $modificatopologias->nombre_Modifica_Topologia }}
+                                    </option>
+            
+                                    @endforeach
+
+                                </select>
 
                             </div>
                         
@@ -170,23 +250,23 @@
                     
                                 <label for="elemento">Elemento</label>
 
-                                <input name="elemento" type="text" class="form-control2" placeholder="Elemento" value="{{old('elemento')}}">
+                                <input name="elemento" type="text" class="form-control2" placeholder="Elemento" value="{{old('elemento')}}" id="elemento">
 
                             </div>
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                 
-                                <label for="estado">Descripción</label>
+                                <label for="descripcion_del_elemento">Descripción del elemento</label>
                         
-                                <textarea name="estado" type="text" class="form-control2" placeholder="Descripción" value="{{old('estado')}}"></textarea>
+                                <textarea name="descripcion_del_elemento" type="text" class="form-control2" placeholder="Descripción del elemento" value="{{old('descripcion_del_elemento')}}" id="descripcion_del_elemento"></textarea>
                 
                             </div>
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                 
-                                <label for="riesgos asociados al cambio">Riesgos asociados al cambio</label>
+                                <label for="riesgos_Asociados_Al_Cambio">Riesgos asociados al cambio</label>
                         
-                                <input name="riesgos asociados al cambio" type="text" class="form-control2" placeholder="Riesgos asociados al cambio" value="{{old('riesgos asociados al cambio')}}">
+                                <input name="riesgos_Asociados_Al_Cambio" type="text" class="form-control2" placeholder="Riesgos asociados al cambio" value="{{old('riesgos_Asociados_Al_Cambio')}}" id="riesgos_Asociados_Al_Cambio">
                 
                             </div>
 
@@ -198,49 +278,60 @@
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                 
-                                <label for="actividad">Actividad</label>
+                                <label for="actividad_De_Cambio">Actividad de cambio</label>
                         
-                                <input name="actividad" type="text" class="form-control2" placeholder="Actividad" value="{{old('actividad')}}">
+                                <input name="actividad_De_Cambio" type="text" class="form-control2" placeholder="Actividad de cambio" value="{{old('actividad_De_Cambio')}}" id="actividad_De_Cambio">
                 
                             </div>
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                 
-                                <label for="hora inicio">Hora inicio</label>
+                                <label for="hora_Inicio_De_Cambio">Hora inicio cambio</label>
                             
-                                <input name="hora inicio" type="time" class="form-control2" placeholder="Hora inicio" value="{{old('hora inicio')}}">
-                            
-                            </div>
-                            
-                            <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
-                            
-                                <label for="hora fin">Hora fin</label>
-                            
-                                <input name="hora fin" type="time" class="form-control2" placeholder="Hora fin" value="{{old('hora fin')}}">
+                                <input name="hora_Inicio_De_Cambio" type="text" class="form-control2" placeholder="Hora inicio cambio" value="{{old('hora_Inicio_De_Cambio')}}" id="hora_Inicio_De_Cambio">
                             
                             </div>
                             
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                             
-                                <label for="duración">Duración</label>
+                                <label for="hora_Fin_De_Cambio">Hora fin cambio</label>
                             
-                                <input name="duración" type="time" class="form-control2" placeholder="Duración" value="{{old('duración')}}">
-                            
-                            </div>
-                            
-                            <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
-                            
-                                <label for="responsable">Responsable</label>
-                            
-                                <input name="responsable" type="text" class="form-control2" placeholder="Responsable" value="{{old('responsable')}}">
+                                <input name="hora_Fin_De_Cambio" type="text" class="form-control2" placeholder="Hora fin cambio" value="{{old('hora_Fin_De_Cambio')}}" id="hora_Fin_De_Cambio">
                             
                             </div>
                             
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                             
-                                <label for="teléfono">Teléfono</label>
+                                <label for="duracion_De_Cambio">Duración cambio</label>
                             
-                                <input name="teléfono" type="text" class="form-control2" placeholder="Teléfono" value="{{old('teléfono')}}">
+                                <input name="duracion_De_Cambio" type="text" class="form-control2" placeholder="Duración cambio" value="{{old('duracion_De_Cambio')}}" id="duracion_De_Cambio">
+                            
+                            </div>
+                            
+                            <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
+                            
+                                <label for="responsable_De_Cambio">Responsable de cambio</label>
+                            
+                                <select name="responsable_De_Cambio" id="responsable_De_Cambio" class="form-control2">
+                                    
+                                    @foreach ($responsablecambio as $responsablecambios)
+
+                                    <option value="{{$responsablecambios->id}}"
+                                        {{(old('responsable.id') == $responsablecambios->id) ? 'selectec':'' }}>
+                                        {{ $responsablecambios->nombre_Responsable }}
+                                    </option>
+                                        
+                                    @endforeach
+
+                                </select>
+                            
+                            </div>
+                            
+                            <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
+                            
+                                <label for="telefono_Cambio">Teléfono de cambio</label>
+                            
+                                <input name="telefono_Cambio" type="text" class="form-control2" placeholder="Teléfono de cambio" value="{{old('telefono_Cambio')}}" id="telefono_Cambio">
                             
                             </div>
 
@@ -252,49 +343,59 @@
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                 
-                                <label for="actividad">Actividad</label>
+                                <label for="actividad_De_Retorno">Actividad de retorno</label>
                         
-                                <input name="actividad" type="text" class="form-control2" placeholder="Actividad" value="{{old('actividad')}}">
+                                <input name="actividad_De_Retorno" type="text" class="form-control2" placeholder="Actividad de retorno" value="{{old('actividad_De_Retorno')}}" id="actividad_De_Retorno">
                 
                             </div>
 
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                 
-                                <label for="hora inicio">Hora inicio</label>
+                                <label for="hora_Inicio_De_Retorno">Hora inicio retorno</label>
                             
-                                <input name="hora inicio" type="time" class="form-control2" placeholder="Hora inicio" value="{{old('hora inicio')}}">
-                            
-                            </div>
-                            
-                            <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
-                            
-                                <label for="hora fin">Hora fin</label>
-                            
-                                <input name="hora fin" type="time" class="form-control2" placeholder="Hora fin" value="{{old('hora fin')}}">
+                                <input name="hora_Inicio_De_Retorno" type="text" class="form-control2" placeholder="Hora inicio retorno" value="{{old('hora_Inicio_De_Retorno')}}" id="hora_Inicio_De_Retorno">
                             
                             </div>
                             
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                             
-                                <label for="duración">Duración</label>
+                                <label for="hora_Fin_De_Retorno">Hora fin retorno</label>
                             
-                                <input name="duración" type="time" class="form-control2" placeholder="Duración" value="{{old('duración')}}">
-                            
-                            </div>
-                            
-                            <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
-                            
-                                <label for="responsable">Responsable</label>
-                            
-                                <input name="responsable" type="text" class="form-control2" placeholder="Responsable" value="{{old('responsable')}}">
+                                <input name="hora_Fin_De_Retorno" type="text" class="form-control2" placeholder="Hora fin retorno" value="{{old('hora_Fin_De_Retorno')}}" id="hora_Fin_De_Retorno">
                             
                             </div>
                             
                             <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
                             
-                                <label for="teléfono">Teléfono</label>
+                                <label for="duracion_De_Retorno">Duración retorno</label>
                             
-                                <input name="teléfono" type="text" class="form-control2" placeholder="Teléfono" value="{{old('teléfono')}}">
+                                <input name="duracion_De_Retorno" type="text" class="form-control2" placeholder="Duración retorno" value="{{old('duracion_De_Retorno')}}" id="duracion_De_Retorno">
+                            
+                            </div>
+                            
+                            <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
+                            
+                                <label for="responsable_De_Retorno">Responsable de retorno</label>
+                            
+                                <select name="responsable_De_Retorno" id="responsable_De_Retorno" class="form-control2">
+                                    
+                                    @foreach ($responsableretorno as $responsableretornos)
+
+                                    <option value="{{$responsableretornos->id}}"
+                                        {{(old('responsable.id') == $responsableretornos->id) ? 'selectec':'' }}>
+                                        {{ $responsableretornos->nombre_Responsable }}
+                                    </option>
+                                        
+                                    @endforeach
+
+                                </select>                            
+                            </div>
+                            
+                            <div class="form-group tamañoNuevaVentana" style="padding-left: 10px; padding-top:5px; width:360px; heigth: 36px;">
+                            
+                                <label for="telefono_Retorno">Teléfono de retorno</label>
+                            
+                                <input name="telefono_Retorno" type="text" class="form-control2" placeholder="Teléfono de retorno" value="{{old('')}}" id="telefono_Retorno">
                             
                             </div>
                             
@@ -313,7 +414,7 @@
 
                         <div class="col-6" align="left">
 
-                            <button class="btn btn-success" style="padding-left:5px; height:30px; width:90px">Guardar</button>
+                            <button class="btn btn-success" style="padding-left:5px; height:30px; width:90px" >Guardar</button>
 
                         </div>
 

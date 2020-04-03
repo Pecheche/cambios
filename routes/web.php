@@ -20,9 +20,11 @@ route::view('/prueba', 'prueba')->name('prueba');
 route::get('/usuarios', 'UsuariosController@index')->name('usuarios');
 
 route::get('/verventana', 'Ventanacontroller@index')->name('verventana');
-
-route::view('/crear-ventana', 'crear-ventana')->name('crear-ventana');
+route::get('/crear-ventana', 'Ventanacontroller@create')->name('crear-ventana');
+route::post('/verventana', 'Ventanacontroller@store')->name('verventana.store');
 route::post('/crear-ventana', 'MessagesController@store')->name('crear-ventana'); 
+
+route::get('/responsables', 'ResponsablesController@index')->name('responsables');
 
 
 

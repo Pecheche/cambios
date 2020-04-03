@@ -88,4 +88,6 @@ a {
   .nav-pills1 .show > .nav-link {
     color: #fff;
     background-color: #fff;
+    padding-left: 5px;
+    padding-right: 5px;
   }

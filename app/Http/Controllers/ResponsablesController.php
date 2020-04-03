@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Usuario;
+use App\Responsable;
 use Illuminate\Support\Facades\DB;
 
-class UsuariosController extends Controller
+class ResponsablesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,24 +15,17 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        $usuario = DB::table('usuario')
-        ->select('usuario.id_Rol_Usuario',
-        'rol.id',
-        'rol.nombre_Rol',
-        'usuario.nombres_Usuario',
-        'usuario.apellidos_Usuario_Usuario',
-        'usuario.documento_Usuario',
-        'usuario.correo_Usuario',
-        'usuario.telefono_Usuario',
-        'usuario.usuario_Usuario',
-        'usuario.estado_Usuario'
+        $responsable = DB::table('responsable')
+        ->select('responsable.id',
+        'responsable.nombre_Responsable',
+        'responsable.correo_Responsable',
+        'responsable.telefono_Responsable'
         )
-        ->join('rol', 'rol.id', '=', 'usuario.id_Rol_Usuario')
-        ->get();
+        ->get('id', 'nombre_Responsable', 'correo_Responsable', 'telefono_Responsable');
 
-        return view('usuarios', ['usuario' => $usuario]);
+        return view('responsables') 
+        ->with('responsable', $responsable);
     }
-
 
     /**
      * Store a newly created resource in storage.

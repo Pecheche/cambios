@@ -40,7 +40,7 @@
     
                     <li class="nav-item dropdown">
 
-                        <a class="nav-link dropdown-toggle" href="#"  align="center" id="usuarios" data-toggle="dropdown" style="font-size:1.5em; color:#000000">Usuarios</a>
+                        <a class="nav-link dropdown-toggle" href="#"  align="center" id="usuarios" data-toggle="dropdown" style="font-size:1.5em; color:#000000;">Usuarios</a>
 
                         <div class="dropdown-menu">
 
@@ -48,8 +48,21 @@
 
 
                         </div>
+
                     </li>
 
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#"  align="center" id="usuarios" data-toggle="dropdown" style="font-size:1.5em; color:#000000;">Responsables</a>
+
+                        <div class="dropdown-menu">
+
+                            <a class="dropdown-item" align="center" href="/responsables" style="font-size:1.5em">Lista de responsables</a>
+
+
+                        </div>
+
+                    </li>
 
                     <li class="nav-item dropdown">
 
@@ -63,7 +76,6 @@
 
 
                         </div>
-
 
                     </li>
         

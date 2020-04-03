@@ -89,7 +89,7 @@
         
                 <div> 
         
-                    <input type="text" id="contaseña" name="contraseña" class="form-control"  placeholder="Contraseña">
+                    <input type="password" id="contaseña" name="contraseña" class="form-control"  placeholder="Contraseña">
                 
                 </div>
 
